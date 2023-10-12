@@ -7,18 +7,29 @@
 有作者管对transformer搞内部激活值变化对输出的分析，以理解transformer模型的推理或知识推断原理的这个方向叫Representation Engineering，应该不是新概念，蛮有趣的
 
 1. Head-to-Tail: How Knowledgeable are Large Language Models (LLM)? A.K.A. Will LLMs Replace Knowledge Graphs?
+
 文章用实验回答了三个问题
+
 ①大模型对事实性任务的回答效果如何？
+
     开源大模型普遍正确率和幻觉率在1：5以上，其余均为“不知道”
+    
 ②大模型对常见事实和罕见事实的问题回答效果如何？
+
     罕见事实的回答效果更差一些
+    
 ③Fine-tuning等常见模型调整策略是否有效帮助大模型提升事实性回答正确率？
+
     不能，fine-tuning倾向于提升模型回答“不知道”的频率，略降低模型回答正确率，幻觉率仍然很高
 2. Locating and Editing Factual Associations in GPT
+
 Neurips2022的文章，针对大模型出现幻觉的推理场景，记录模型中间各层激活值，对输入序列加噪声后用记录尝试恢复不同位置（层、序列位置、模块）的激活值，观察幻觉发生情况
-   作者根据实验认为，attention倾向于序列信息复制融合，MLP是实际进行实体关系推断的模块
+   
+作者根据实验认为，attention倾向于序列信息复制融合，MLP是实际进行实体关系推断的模块
 3. Representation Engineering: A Top-Down Approach to AI Transparency
+
 设计多个prompt然后针对感兴趣的概念所在token位置抽取隐层表征，然后做PCA取主方向做所谓reading vector
+
 留着细读，主要是针对transformer架构产生的幻觉可以进行span定位感觉很叼，给的结果示意图很让人惊讶
 
 ## Knowledge graph and LLMs
