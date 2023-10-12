@@ -42,7 +42,7 @@ Neurips2022的文章，针对大模型出现幻觉的推理场景，记录模型
 
 生成Query语句从数据库检索答案，对prompt中的错误进行更改
 
-3. MindMap: Knowledge Graph Prompting Sparks Graph of Thoughts in Large Language Models
+2. MindMap: Knowledge Graph Prompting Sparks Graph of Thoughts in Large Language Models
 
 先用大模型处理输入，找出具体要分析的实体串。
 
@@ -50,7 +50,7 @@ Neurips2022的文章，针对大模型出现幻觉的推理场景，记录模型
 
 用这俩拼出一个局部知识图，让大模型看这些三元组然后推断
 
-4. Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph
+3. Think-on-Graph: Deep and Responsible Reasoning of Large Language Model on Knowledge Graph
 
 TOG
 
